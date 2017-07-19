@@ -1,0 +1,15 @@
+To run code: Open a command window in the folder containing the code file and the input file. The command line is as follows:
+  python Equation_Solver8.py input-file.csv output-file.csv
+Python must be downloaded on your computer, with "python" being its assigned command (otherwise just alter the above command line)
+
+File to be entered should be a .csv file with the following columns:
+  - Col H: m1 value, determined from median effect plot - log(fa/fu) v log(conc.) - of Ab1
+  - Col I: fa1A value (fa of mAb 1 in well 1)
+  - Col J: fa1B value (fa of mAb 1 in well 2)
+  - Col K: m2 value, determined from median effect plot - log(fa/fu) v log(conc.) - of Ab2
+  - Col L: fa2A value (fa of mAb 2 in well 1)
+  - Col M: fa2B value (fa of mAb 2 in well 2)
+NOTE: Do not put data in the first two rows; use these to label the columns
+
+Program will read rows 3-13 and calculate the predicted Loewe fu (colN-Q), fa (colR-U), and log(fu/fa) (col V-Y) for each
+A result of "DNE" indicates that the fa/fu of the original input values is a negative value, and therefore no Loewe prediction can be calculated
